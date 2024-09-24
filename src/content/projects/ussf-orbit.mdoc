@@ -1,0 +1,113 @@
+---
+title: Space Force Orbit Design System
+sortID: 2
+hideTitle: false
+line2: a human-centered employee portal for Space Force Guardians
+thumbnail: ../../assets/images/pages/ussf-orbit/thumbnail.gif
+accent: '#2724c2'
+publishStatus: published
+---
+![USSF customized Storybook](../../assets/images/pages/ussf-orbit/storybook.png)
+
+## **Background**
+
+The Space Force portal is a web application by a team called “ORBIT” worked on with the United States Space Force. The United States Space Force is the space service branch of the U.S. Armed Forces and the world’s only dedicated independent space force. Along with the U.S. Air Force, the Space Force is part of the Department of the Air Force, led by the secretary of the Air Force. I was allocated to this project team for a year and a half, from September 2022 –&nbsp;March 2024.
+
+This is an internal employee intranet system for Space Force employees and enlisted, called Guardians, who have been involved in shaping and testing the system from the project’s inception.
+
+{% ImageGallery
+   options={width: "100%", gap: "1rem", imageSize: "", aspectRatio: "1/1"}
+   items=[{image: "/ussf-orbit/news.png", altText: "news and announcements page"}, {image: "/ussf-orbit/myspace.png", altText: "My Space page"}, {image: "/ussf-orbit/sitesnapps.png", altText: "sites and applications page"}] /%}
+
+I worked on this project as a part of a team of nine, as one of the two designers on the project. I joined two years into the project in September of 2022. My role on this project was a UX engineer and accessibility specialist, while also contributing to usability research planning and session facilitation in a supporting role.
+
+![](../../assets/images/pages/ussf-orbit/ussf-fi-3.jpg)
+
+## **Orbit Design System**
+
+[**The Orbit Design system**](https://ussf-orbit.github.io/ussf-portal-client/) is a components and shared styles system built on top of the United States Web Design System. Our team maintained the design system both as a Figma library and as a Storybook site which displays our actual components as they appear in the app.
+
+The design system is a highly collaborative aspect of this project, and is led by the design and engineering teams together. In my time on this project, I developed an organization system for our storybook, made performance improvements, audited for accessibility, and and helped maintain front end dependencies, such as the USWDS component library we build on top of, an open source project maintained by Truss, called [**react-uswds**](https://github.com/trussworks/react-uswds). Below are some PRs I’ve worked on that show my contributions to the Orbit Design system in 2022–2023.
+
+### **Initial Storybook Enhancements**
+
+One of the first projects I took on when I joined the project was improving the appearance of the project storybook. More detail in the PR, but some highlights include:
+
+- Installs the Storybook [**Themeing Addon**](https://storybook.js.org/docs/react/configure/theming#create-a-theme-quickstart) so we could style the interface of the storybook instance Adjusts storybook theme preferences (switches to dark theme and USSF colors for the background) and adds USSF branding
+- changes [**the order of Storybook Roots**](https://storybook.js.org/docs/react/writing-stories/naming-components-and-hierarchy#sorting-stories) (Global, Layout, Components) to be in an order that puts the most global things up top so they don’t get lost behind the big components list (later on I end up breaking this large root into several smaller ones).
+- changes order of Storybook Addons import to make it so the ones that are more commonly used by components [**are shown first**](https://github.com/storybookjs/storybook/issues/9819).
+- switches Storybook font (used in sidebar items and storybook interface) from System Font to Sharp Sans, one of our brand fonts
+
+[**The Orbit Design system Storybook on GitHub Pages**](https://storybook.guardianone.us/)
+
+### **Design PR Review Guide**
+
+![](../../assets/images/pages/ussf-orbit/docs.png)
+
+[**PR Review Process for Space Force Designers**](https://crawling-mistake-434.notion.site/PR-Review-Process-for-Space-Force-Designers-58b05a1aa5c146bd8eec13e603b7c079?pvs=4)
+
+Another thing I did when I joined the project was ensure we implemented a designer review process for front end PRs. The team had one when the project started but had fallen to the wayside over the course of a couple staffing changes.
+
+I brought my expertise from the effective design review process for front end PRs we had implemented on the [**MilMove project**](https://shauna.codes/project/mmds) to build this documentation to train new designers and non-engineers who wanted to participate in conducting review of components in the design system in PRs on GitHub.
+
+The guide includes information on what Storybook is, how to get tagged in a front end PR, how our visual regression testing tooling works, and how to run the application on your machine in terms more friendly to non-engineers.
+
+### **Storybook Reorganization**
+
+After some time on the project, I noticed the design system storybook was not being used by the team as much as I would like to see, and didn’t relate to the organization of our Figma library in a way that would ensure alignment across disciplines on the design system and how it worked.
+
+![](../../assets/images/pages/ussf-orbit/reorg.png)
+
+The designers on the team paired to take inventory in Mural of all our components and worked together to figure out what information hierarchy would scale well and ensure folks could find the component they needed to reference more quickly. Once we had an idea of how we wanted to approach it, we showed the engineers, who helped us iterate and arrive on a decision of what our best approach would be.
+
+From there, I went through all our components’ stories files and adjusted what roots and folders the components would appear in to align to the information architecture we decided on as a team.
+
+### **Page Loader Refactor**
+
+I worked on a couple iterations of our page loader in my time on the project. Once early on, I had some extra time at the end of a sprint and decided I couldn’t look at the somewhat silly loader we had in place from the early stages of the project. I also felt it did not relate to the work of the Space Force very much, as most Guardians are monitoring satellites orbiting the earth.
+
+![](../../assets/images/pages/ussf-orbit/loader.png)
+
+The first iteration featured a satellite orbiting an earth and combined a few keyframe animations to make it possible. After about 10 months, we were able to collect user and stakeholder feedback to create a new version that took needs of a more professional polished look into account, while still keeping it visually pleasing in a way that delighted users who sometimes would spend a decent amount of time day to day at bases with throttled connections.
+
+In both versions, there were constraints I considered, such as making sure the loader animation was something that would not cause issues for folks with vestibular disorders, and that the loader did not use too many image assets that could cause the loader to not load efficiently. Something I am considering long term, is adding a mechanism to pause the animation which currently does not exist.
+
+![](../../assets/images/pages/ussf-orbit/loader-animation.gif)
+
+live version of page loader [**in Orbit Design System Storybook**](https://storybook.ussforbit.us/iframe.html?args=&id=base-loader--default-loader&viewMode=story)
+
+## **Accessibility of the Space Force Portal**
+
+### **Accessibility Plan**
+
+I collected the processes we developed and information our team had in an [**Accessibility Plan**](https://docs.google.com/document/d/1SedvTD9kiFbsfqKJvrSZJvHvXE2qSBEpWnt86tjfeuI/edit?usp=sharing), a living document that we maintained over time to keep track of stakeholders (such as your government agency’s [**Section 508 program manager**](https://www.section508.gov/tools/coordinator-listing/)), assistive technology targets, the tools we use to do automated and manual testing, what our client wants to see in our compliance report, and more. On my team, I am the point person on the accessibility plan, but anyone on my team can contribute and make adjustments to it.
+
+![](../../assets/images/pages/ussf-orbit/a11y.jpeg)
+
+More detail on the accessibility planning and assessment process I’ve shaped within my organization can be found in my post [**Integrating accessibility compliance into your software development process**](https://truss.works/blog/building-accessible-software) on the Truss blog.
+
+Our accessibility plan, and the scorecard we used to shape it and our priorities led to many incremental accessibility wins, from building a process around iterating on our compliance reporting and keeping it up to date with each release, to prioritizing remediation work in our backlog, and building sustainable review processes to ensure accessibility in incorporated from the start of the development process.
+
+![](../../assets/images/pages/ussf-orbit/pyramid.jpeg)
+
+Our accessibility plan also outlines what testing occurs at what stage of the process, including basic automated linting, to manual testing in [**ANDI**](https://www.ssa.gov/accessibility/andi/help/install.html) with each PR, to re-testing prior to each release to update our Accessibility Conformance Report / VPAT, and even testing with real users with disabilities several times a year.
+
+### **Accessibility Conformance Reporting**
+
+Since this is a project for a federal government client, there are pretty strong requirements around conformance reporting. For our contract, we were required to align with WCAG at the 2.0 AA level. It’s worth noting, that this standard is pretty old and was published in 2008, and is not appropriate in many software projects nowadays, especially when they are focused on modern devices such as phones and touch screens. The intent of this product is that our users aren’t supposed to be accessing the system outside of their goverment computers, so we felt this standard would be sufficient for now, and that once we were meeting it we could aim higher, as we work in an interactive agile fashion.
+
+As requested from the client and verified by our Air Force Section 508 coordinator, we followed the [**Trusted Tester**](https://www.dhs.gov/trusted-tester) 5.1.x standard (in Q3/Q4 2023 v 5.1.3 is set to come out and Trusted Testers, including myself are expected to change to the new version in our assessments). I use the tool ACRT to generate reports following the process, which converts the Trusted Tester standards over to WCAG standards and level assignments automatically in PDF form.
+
+![](../../assets/images/pages/ussf-orbit/reports.jpeg)
+
+Read more: [**Navigating the VPAT Journey: Testing & Reporting for Accessibility Compliance**](https://truss.works/blog/testing-reporting-for-software-accessibility-compliance)
+
+### **Remediation Work**
+
+[**Acessibility Remediation PRs**](https://github.com/USSF-ORBIT/ussf-portal-client/pulls?q=is%3Apr+author%3Ashkeating+is%3Aclosed+label%3A%22type%3A+a11y%22)
+
+I also on this project went into the code and contributed to remediation work to the extent of my ability as an engineer. While I do not consider myself a software engineer, I do in this work step outside the usual bounds of a design practitioner into making adjustments to our jest and playwright tests to account for things such as a new accessible name on a button or link.
+
+![](../../assets/images/pages/ussf-orbit/fixit.jpeg)
+
+I’ll often pull small wins into the scope of other design system component work and use accessibility related usability feedback to help drive design decisions.

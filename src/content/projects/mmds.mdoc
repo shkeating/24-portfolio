@@ -1,0 +1,62 @@
+---
+title: MilMove Design System
+sortID: 4
+hideTitle: false
+line2: >-
+  a living pattern library of React components for an enterprise government
+  system.
+thumbnail: ../../assets/images/pages/mmds/thumbnail.gif
+accent: '#ffcf00'
+publishStatus: published
+---
+## **Background**
+
+MilMove is a new system from United States Transportation Command to support the relocation of families in the services during a change of station. Something we learned in our user research that has always stuck with me, is that most service members and their families cite these change of station moves as the second most traumatic thing they experience in their enlisted time, second only to active combat. I was allocated to this project for 24 months, spanning January 2020–December 2021.
+
+Our purpose on this project is to make this process easier for folks. Our design team felt that is is really important for this platform to be as easy to use as possible. High usability needs a strong foundation, which is how the MilMove Design System came to be. It is an open source project, and can be viewed on Github (‣). The Storybook for the design system is live as of fall 2022 at [**storybook.dp3.us**](http://storybook.dp3.us/)
+
+## **My role**
+
+I served as the design engineer on the project, working with both the design and engineering team to build and refine our design system, which resided both in Storybook and Zeplin as public resources for anyone on the team regardless of role.
+
+I paired with our product designers to help determine what would be feasible for our engineering team to build, and provided advisement on accessibility best practices. I provided and trained designers on how to participate in the pull request process, and maintained visual regression testing tooling (Happo) that empowered them to be able to review front end work in the repository without having to run the whole app locally on their machine. I also trained other teams at my company on how they might do that with their project teams.
+
+I worked with our engineers to build and style components, serving as the project’s CSS and SASS expert. I worked with the team to gradually bring most of our components into a centralized components directory, with documentation files for Storybook, css modules, Cypress and Jest test files, and component React/JSX files all living together to ensure things could be maintained easily.
+
+I held a weekly cross-team front end meeting where we would talk about updates to the design system, best practices for the team and decision record proposals around our front end structure, and to answer questions around styling and accessibility best practices.
+
+I demoed any large scale front end changes to the project team in our monthly team meeting to advocate for correct usage of our design system and front end processes.
+
+I held a quarterly bug bash where project team members and client stakeholders would test the new features in the system and find front end bugs and accessibility issues. The last one I ran had over 60 participants and tracked down just under 140 bugs to be prioritized into our backlog.
+
+## **Impact Highlights**
+
+When I joined the project, we were in deep tech debt and adding new components was really challenging. Many of the engineers I worked with had little to no prior CSS experience. The processes I created and the central resource I helped create are all still in use by this project team today.
+
+In January of 2020, there was no clear path forward to filling out a VPAT (Voluntary Product Accessibility Template) for this project. The work I did to get all of our components logged and easily tested using both automated and manual methods within the Storybook environment has made this process much easier, in addion to being able to capture other issues using our Bug Bash process.
+
+Our customer facing app for our service member users is now 100% responsive. In 2020 when I joined this was not the case. In or user research, we determined this user type was predominately interacting with the PCS move process from their phones, so we needed to undergo a large scale effort to improve the components touching that part of the system to be 100% responsive. I also left the project having educated our engineers on how to style mobile first components correctly.
+
+We learned in user research that our office users, the folks who work for USTRANSCOM that process moves from bases and skiffs, have very limited bandwidth on their machines, their internet connections are tremendously slow. Optimizing for performance is really critical on the MilMove Office App. I spent my time on the project trying to cut as much superfluous app code as possible, taught folks ways to write more efficient CSS strategies such us using css modules over global stylesheets, and encouraged image optimization wherever possible.
+
+## **Long term impacts**
+
+This project worked in one week sprints and was on a very fast paced productions timeline. Because we were working with a federal government agency, our budget and contract approvals had to go through Congress. If we fell behind or were not meeting expectations, it was a big problem. In order to balance this fast development cycle and trying build something that is high quality, accessible, and built quickly, a design system was critical. Once we got this design system established (it is not done, and is still growing to this day!) we found we were able to meet our Outcome requirements much faster with less mistakes.
+
+That doesn’t mean though, that no one ever made a mistake again. The processes I developed to conduct usability testing at a large scale to identify bugs and push the system to its limits helped make sure these issues get caught and we don’t end up in further tech debt in the future.
+
+This project is procured by a federal government agency, meaning we are contractually obligated to meet Section 508 accessibility standards. I have focused on the WCAG standards for the entirety of my career (because we should all be meeting and exceeding these requirements regardless if we are legally obligated to, for our users!) and was an asset to my team in making sure new work was compliant and going back through old work to identify areas for remediation. I also established a VPAT for the platform, which will be completed as we get closer to the platform actually launching.
+
+## **Key Learnings**
+
+I learned about the United States Web Design System and how to use it as a base to build out a design system for a complex software project. The USWDS is a wonderful tool that the GSA builds for federal government web development projects, but it is primarily focused on informational, documentation based, site content. We created MMDS as an expansion of it to create components specific to our needs and that of a large scale software project.
+
+Blog posts I wrote about the United States Web Design System and how we used it on the project in 2020: [**https://truss.works/blog/uswds-overview**](https://truss.works/blog/uswds-overview)
+
+I learned about working on large scale teams, and that I actually prefer it, as I got time to focus on my specialization in design engineering.
+
+I learned about visual regression testing in Happo, automated interface testing in Cypress, and unit testing in Jest and React Testing Library. I don’t consider myself a software engineer, but I think these are good skills to have when you work with code as much as I do, and are working with so many software engineers. I learned so much about best practices in a repo this size, best practices around pull requests, and dependency management at this scale.
+
+I got to learn how to create a living design system in Storybook and how to manage Storybook add on and integrations.
+
+I got even stronger at React and JSX. I had at this point been working with them for several years, but only to build static components. This project pushed me to work more with React components and all the things you can do with them. I ended up taking the Epic React Basics course and completed a lot of Codecademy content while working on this project to further build on my understanding.
