@@ -32,7 +32,7 @@
     }
   },
   "container": {
-    "width": "950px",
+    "width": "1200px",
     "padding": "1rem",
     "gap": "1rem"
   },

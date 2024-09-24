@@ -1,11 +1,11 @@
 {
-  "pageWidth": "700px",
+  "pageWidth": "1200px",
   "padding": {
-    "horizontal": "1rem",
-    "vertical": "0rem"
+    "horizontal": "20px",
+    "vertical": "0px"
   },
   "images": {
-    "displayWidth": "800px",
+    "displayWidth": "600px",
     "optimizationWidth": 800
   }
 }

@@ -149,14 +149,14 @@ declare module 'astro:content' {
   slug: "about";
   body: string;
   collection: "pages";
-  data: any
+  data: InferEntrySchema<"pages">
 } & { render(): Render[".mdoc"] };
 "hidden-page.mdoc": {
 	id: "hidden-page.mdoc";
   slug: "hidden-page";
   body: string;
   collection: "pages";
-  data: any
+  data: InferEntrySchema<"pages">
 } & { render(): Render[".mdoc"] };
 };
 "portfolioGroups": {
@@ -165,14 +165,14 @@ declare module 'astro:content' {
   slug: "all";
   body: string;
   collection: "portfolioGroups";
-  data: any
+  data: InferEntrySchema<"portfolioGroups">
 } & { render(): Render[".mdoc"] };
 "custom-group.mdoc": {
 	id: "custom-group.mdoc";
   slug: "custom-group";
   body: string;
   collection: "portfolioGroups";
-  data: any
+  data: InferEntrySchema<"portfolioGroups">
 } & { render(): Render[".mdoc"] };
 };
 "projects": {
@@ -181,49 +181,21 @@ declare module 'astro:content' {
   slug: "mmds";
   body: string;
   collection: "projects";
-  data: any
+  data: InferEntrySchema<"projects">
 } & { render(): Render[".mdoc"] };
 "speedflex.mdoc": {
 	id: "speedflex.mdoc";
   slug: "speedflex";
   body: string;
   collection: "projects";
-  data: any
-} & { render(): Render[".mdoc"] };
-"typography-stuff.mdoc": {
-	id: "typography-stuff.mdoc";
-  slug: "typography-stuff";
-  body: string;
-  collection: "projects";
-  data: any
-} & { render(): Render[".mdoc"] };
-"unlisted-project.mdoc": {
-	id: "unlisted-project.mdoc";
-  slug: "unlisted-project";
-  body: string;
-  collection: "projects";
-  data: any
-} & { render(): Render[".mdoc"] };
-"unpublished-page.mdoc": {
-	id: "unpublished-page.mdoc";
-  slug: "unpublished-page";
-  body: string;
-  collection: "projects";
-  data: any
+  data: InferEntrySchema<"projects">
 } & { render(): Render[".mdoc"] };
 "ussf-orbit.mdoc": {
 	id: "ussf-orbit.mdoc";
   slug: "ussf-orbit";
   body: string;
   collection: "projects";
-  data: any
-} & { render(): Render[".mdoc"] };
-"you-wouldn-t-download-a-hedgehog.mdoc": {
-	id: "you-wouldn-t-download-a-hedgehog.mdoc";
-  slug: "you-wouldn-t-download-a-hedgehog";
-  body: string;
-  collection: "projects";
-  data: any
+  data: InferEntrySchema<"projects">
 } & { render(): Render[".mdoc"] };
 };
 
@@ -235,5 +207,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	export type ContentConfig = never;
+	export type ContentConfig = typeof import("../src/content/config.js");
 }

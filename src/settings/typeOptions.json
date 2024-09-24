@@ -21,7 +21,7 @@
     "lineHeight": 1.5,
     "color": "#000000",
     "marginTop": "1em",
-    "marginBottom": "2em"
+    "marginBottom": "0.5em"
   },
   "h2": {
     "fontFamily": "fontStack2",
