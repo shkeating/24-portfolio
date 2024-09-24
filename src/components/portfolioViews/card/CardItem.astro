@@ -92,7 +92,9 @@ const cardSettings = settings.portfolioLayouts.card;
     )
   }
   <div class="card-text-panel">
-    <a class="card-text-panel-title card-link" href={url}>{title}</a>
+    <a style={{
+    "--project-accent":accent
+  }} class="card-text-panel-title card-link" href={url}>{title}</a>
     {line2 && <p class="card-text-panel-line2">{line2}</p>}
     {line3 && <p class="card-text-panel-line3">{line3}</p>}
   </div>
