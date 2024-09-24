@@ -2,7 +2,7 @@
   "pageWidth": "1200px",
   "padding": {
     "horizontal": "20px",
-    "vertical": "0px"
+    "vertical": "10px"
   },
   "images": {
     "displayWidth": "600px",

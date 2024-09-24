@@ -3,10 +3,10 @@
     "title": {
       "fontFamily": "fontStack2",
       "fontWeight": "700",
-      "fontStyle": "italic",
-      "fontSize": "1.5rem",
+      "fontStyle": "normal",
+      "fontSize": "1.2rem",
       "lineHeight": 1.25,
-      "color": "#001ca8",
+      "color": "#00c3d1",
       "marginTop": "0rem",
       "marginBottom": "0.25rem"
     },
@@ -16,7 +16,7 @@
       "fontStyle": "normal",
       "fontSize": "1rem",
       "lineHeight": 1.25,
-      "color": "#000000",
+      "color": "#ffffff",
       "marginTop": "0rem",
       "marginBottom": "0.25rem"
     },
@@ -42,7 +42,7 @@
       "minWidth": 300,
       "overlayInset": "1rem",
       "overlayColor": "#ffffff",
-      "useProjectColor": false,
+      "useProjectColor": true,
       "overlayPadding": "2rem",
       "overlayOpacity": 75
     }
@@ -54,8 +54,8 @@
       "padding": "0.75rem",
       "textPadding": "0px",
       "cardGap": "0.75rem",
-      "bgColor": "#e6e6e6",
-      "hoverColor": "#a8eeff"
+      "bgColor": "#363636",
+      "hoverColor": "#262626"
     },
     "image": {
       "aspectRatio": "3/2",

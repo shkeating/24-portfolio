@@ -149,14 +149,14 @@ declare module 'astro:content' {
   slug: "about";
   body: string;
   collection: "pages";
-  data: InferEntrySchema<"pages">
+  data: any
 } & { render(): Render[".mdoc"] };
 "hidden-page.mdoc": {
 	id: "hidden-page.mdoc";
   slug: "hidden-page";
   body: string;
   collection: "pages";
-  data: InferEntrySchema<"pages">
+  data: any
 } & { render(): Render[".mdoc"] };
 };
 "portfolioGroups": {
@@ -165,14 +165,14 @@ declare module 'astro:content' {
   slug: "all";
   body: string;
   collection: "portfolioGroups";
-  data: InferEntrySchema<"portfolioGroups">
+  data: any
 } & { render(): Render[".mdoc"] };
 "custom-group.mdoc": {
 	id: "custom-group.mdoc";
   slug: "custom-group";
   body: string;
   collection: "portfolioGroups";
-  data: InferEntrySchema<"portfolioGroups">
+  data: any
 } & { render(): Render[".mdoc"] };
 };
 "projects": {
@@ -181,21 +181,28 @@ declare module 'astro:content' {
   slug: "mmds";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".mdoc"] };
 "speedflex.mdoc": {
 	id: "speedflex.mdoc";
   slug: "speedflex";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
+} & { render(): Render[".mdoc"] };
+"tds.mdoc": {
+	id: "tds.mdoc";
+  slug: "tds";
+  body: string;
+  collection: "projects";
+  data: any
 } & { render(): Render[".mdoc"] };
 "ussf-orbit.mdoc": {
 	id: "ussf-orbit.mdoc";
   slug: "ussf-orbit";
   body: string;
   collection: "projects";
-  data: InferEntrySchema<"projects">
+  data: any
 } & { render(): Render[".mdoc"] };
 };
 
@@ -207,5 +214,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	export type ContentConfig = typeof import("../src/content/config.js");
+	export type ContentConfig = never;
 }
