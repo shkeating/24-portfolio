@@ -3,10 +3,16 @@ title: Space Force Orbit Design System
 sortID: 2
 hideTitle: false
 line2: a human-centered employee portal for Space Force Guardians
-thumbnail: ../../assets/images/pages/ussf-orbit/thumbnail.jpg
+thumbnail: ../../assets/images/pages/ussf-orbit/thumbnail.png
 accent: '#C0F9C7'
 publishStatus: published
 ---
+{% MultiColumn
+   justifyContent="flex-start"
+   alignItems="flex-start"
+   flexDirection="row"
+   gap="10px" %}
+{% Column targetWidth="600px" flexGrow=true %}
 ![USSF customized Storybook](../../assets/images/pages/ussf-orbit/storybook.png)
 
 ## **Background**
@@ -100,10 +106,42 @@ Read more: [**Navigating the VPAT Journey: Testing & Reporting for Accessibility
 
 ### **Remediation Work**
 
-[**Acessibility Remediation PRs**](https://github.com/USSF-ORBIT/ussf-portal-client/pulls?q=is%3Apr+author%3Ashkeating+is%3Aclosed+label%3A%22type%3A+a11y%22)
+[**Accessibility Remediation PRs**](https://github.com/USSF-ORBIT/ussf-portal-client/pulls?q=is%3Apr+author%3Ashkeating+is%3Aclosed+label%3A%22type%3A+a11y%22)
 
 I also on this project went into the code and contributed to remediation work to the extent of my ability as an engineer. While I do not consider myself a software engineer, I do in this work step outside the usual bounds of a design practitioner into making adjustments to our jest and playwright tests to account for things such as a new accessible name on a button or link.
 
 ![](../../assets/images/pages/ussf-orbit/fixit.jpeg)
 
 I’ll often pull small wins into the scope of other design system component work and use accessibility related usability feedback to help drive design decisions.
+{% /Column %}
+
+{% Column targetWidth="350px" flexGrow=false %}
+## Shortcuts
+
+[The Orbit Design System Storybook](https://storybook.guardianone.us/)
+
+[PR Review Guide for Designers](https://crawling-mistake-434.notion.site/PR-Review-Process-for-Space-Force-Designers-58b05a1aa5c146bd8eec13e603b7c079?pvs=4)
+
+[Orbit Design System: Loader](https://storybook.guardianone.us/?path=/story/base-loader--default-loader)\
+\
+Truss Blog Post: [Integrating accessibility compliance into your software development process](https://truss.works/blog/building-accessible-software)
+
+## Role
+
+Design System Engineer
+
+Accessibility Lead
+
+UX Design & Research
+
+## Duration
+
+September 2022–April 2024
+
+## Tools
+
+Storybook, Figma, Mural, Dovetail (for research library)
+
+Stack: React/Typescript (TSX), SASS/CSS Modules, NextJS
+{% /Column %}
+{% /MultiColumn %}
